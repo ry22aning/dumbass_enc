@@ -8,7 +8,7 @@ def vigenere_cipher(plainText, key):
     for eachLetter in plainText:
         if eachLetter in uppercase:
             index = uppercase.index(eachLetter)
-            indexKey = lowercase.index(key[key_index % key_length]) #This part ensures the index stays within the bounds of the key, even if key_index exceeds the length of the key.
+            indexKey = lowercase.index(key[key_index % key_length]) #ensures the index stays within the bounds of the key, even if key_index exceeds the length of the key.
 
             new_index = (index + indexKey) % 26
             cryptText.append(uppercase[new_index])
@@ -51,10 +51,10 @@ def fstep(cryptText, key_length):
 plainText = input("Enter the text: ")
 key = input("Enter the key: ")
 
-if key != 'quantum':  # Only proceed if the key is correct
+if key != 'quantum':  
     print("Invalid key")
 else:
-    key = key.lower()  # Normalize the key to lowercase
+    key = key.lower() 
 
 # Function call
 encryptedText = vigenere_cipher(plainText, key)
