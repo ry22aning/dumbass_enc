@@ -46,7 +46,7 @@ if key != 'quantum':  # Only proceed if the key is correct
 else:
     key = key.lower()  # Normalize the key to lowercase
     encryptedText = vigenere_cipher(plainText, key)
-    print("Encrypted Text:", encryptedText)
+    #print("Encrypted Text:", encryptedText)
 
     # Process the encrypted text through fstep
     finalOutput = fstep(encryptedText)
